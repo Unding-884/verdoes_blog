@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
-{use SoftDeletes;
+{
+    use SoftDeletes;
+    const UNKNOWN_USER = 1;
     use HasFactory;
     protected $fillable
         = [
@@ -18,7 +20,6 @@ class BlogPost extends Model
             'content_raw',
             'is_published',
             'published_at',
-            'user_id',
         ];
 
     /**
