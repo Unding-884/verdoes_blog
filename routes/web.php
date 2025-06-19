@@ -49,4 +49,11 @@ Route::group($groupData, function () {
     ->names('blog.admin.posts');
  });
 
+Route::get('process-video', 'DiggingDeeperController@processVideo')
+    ->name('digging_deeper.processVideo');
+
+Route::get('prepare-catalog', 'DiggingDeeperController@prepareCatalog')
+    ->name('digging_deeper.prepare-сatalog');
+
+
 
